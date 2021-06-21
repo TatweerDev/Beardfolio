@@ -1,1 +1,23 @@
 // app global css in Sass form
+.text-montserrat
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif
+
+.mobile-screen
+  @media (max-width: $breakpoint-xs-max)
+    display: block
+  @media (min-width: $breakpoint-sm-min)
+    display: none
+
+.tablet-screen
+  @media (max-width: $breakpoint-xs-max)
+    display: none
+  @media (min-width: $breakpoint-sm-min)
+    display: block
+
+.desctop-screen
+  @media (max-width: $breakpoint-sm-max)
+    display: none
+  @media (min-width: $breakpoint-md-min)
+    display: block
+
+  

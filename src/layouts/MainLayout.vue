@@ -1,107 +1,67 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+      <q-toolbar class="bg-grey-9 text-positive" >
 
         <q-toolbar-title>
-          Quasar App
+          <router-link to="/" class="link text-grey-3 text-montserrat text-weight-medium">
+            Beardfolio
+          </router-link>
+          
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <nav>
+          <ul class="tablet-screen text-montserrat text-positive">
+            <li>About me</li>
+            <li>My projects</li>
+            <li>Contacts</li>
+          </ul>
+        </nav>
+
+        <div>Ru</div>
       </q-toolbar>
     </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer bordered>
+      <q-tabs class="bg-grey-9 mobile-screen" active-color="positive">
+        <q-route-tab
+          name="about"
+          icon="person"
+          label="Обо мне"
+          to="/about" />
+        <q-route-tab
+          name="alarms"
+          icon="perm_media"
+          label="Все проекты"
+          to="/projects" />
+        <q-tab
+          name="contacts"
+          icon="import_contacts"
+          label="Мои контакты" />
+      </q-tabs>
+    </q-footer>
   </q-layout>
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksData = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-];
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
   data () {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
     }
   }
 }
 </script>
+
+<style lang="sass">
+.link
+  text-decoration: none
+  font-size: 30px
+.menu-item
+  color: #fff !important
+</style>
