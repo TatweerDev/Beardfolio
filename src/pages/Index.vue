@@ -1,15 +1,9 @@
 <template>
   <q-page class=" bg-primary text-white">
-    <q-img src="../img/banner.jpg">
-      <div class="absolute-center text-subtitle1 titles">
-        <span class="text-h2 text-bold text-center"> Привет!</span>
-        <span class="block text-h6">Меня зовут Александр</span>
-      </div>
-    </q-img>
     <q-img src="../img/photo1.png" class="custom-image" />
     <div class="relative">
       <span class="descr">
-        И я <span class="text-red">Фронтенд разработчик (Мидл).</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
+        Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик (Мидл).</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
       </span>
       <router-link class="text-red absolute-bottom-right link-more" to="/about">
         Подробнее...
@@ -55,16 +49,16 @@ export default {
           img: '../img/tat.jpg'
         },
         {
-          title: 'ЭИОС',
-          descr: 'Информационная среда для школьников и учителей',
-          link: 'https://eios.netlify.app/',
-          img: '../img/eios.png'
-        },
-        {
           title: 'Photograf',
           descr: 'Сайт и мобильное приложение для любителей фотографи',
           link: 'https://photograf.barbium.com/#/',
           img: '../img/photograf.png'
+        },
+        {
+          title: 'ЭИОС',
+          descr: 'Информационная среда для школьников и учителей',
+          link: 'https://eios.netlify.app/',
+          img: '../img/eios.png'
         },
         {
           title: 'Shakur textile',
@@ -85,12 +79,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.titles 
-  width: 330px
-  display: flex
-  flex-direction: column
-  text-align: center
-  background-color: rgba(0, 0, 0, 0.8)
 
 
 // .custom-image

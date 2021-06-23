@@ -22,9 +22,9 @@
       <q-btn outline rounded color="red" label="Скачать CV" class="text-white cv-button"/>
     </section>
     <section class="skills-main">
-      <h2>Мой скилл</h2>
+      <h2>Мои навыки</h2>
       <div class="text-wrapper">
-        <span class="skills-text">Для работы я использую <span class="text-red">HTML, CSS и JavaScript.</span> Пишу код как на нативном  <span class="text-red">JavaScript(ES7)</span>, так и на фреймворках - в основном на <span class="text-red">Vue.js(Vue2, Vue3)</span>, а так же <span class="text-red">Quasar</span> и <span class="text-red">JQuerry.</span> На <span class="text-green">Vue</span> есть опыт работы с <span class="text-green">REST API, Vuex, Router</span> и другими библиотеками. Также разрабатывал универсальные веб и мобильные приложения - <span class="text-red">PWA</span>, используя  <span class="text-red">Quasar</span>. Само собой уверенно использую <span class="text-red">GIT, SASS, LESS, Webpack, Gulp</span> и другие базовые технологии, необходимые сегодня для разработки. Есть опыт работы в команде. Также у меня был опыт работы с системами CMS, такими как WordPress. Работаю с шаблонами Photoshop, Zeplin, Figma и т.д. Я всегда двигаюсь вперед и изучаю новые технологии и навыки. Умею общаться с коллективом. Вот как то так...</span>
+        <span class="skills-text">Для работы я использую <span class="text-red">HTML, CSS и JavaScript.</span> Пишу код как на нативном  <span class="text-red">JavaScript(ES7)</span>, так и на фреймворках - в основном на <span class="text-red">Vue.js(Vue2, Vue3)</span>, а так же <span class="text-red">Quasar</span> и <span class="text-red">JQuerry.</span> На <span class="text-green">Vue</span> есть опыт работы с <span class="text-green">REST API, Vuex, Router, Service Worker</span> и другими библиотеками. Также разрабатывал универсальные веб и мобильные приложения - <span class="text-red">PWA</span>, используя  <span class="text-red">Quasar</span>. Само собой уверенно использую <span class="text-red">GIT, SASS, LESS, Webpack, Gulp, Node</span> и другие базовые технологии, необходимые сегодня для разработки. Есть опыт работы в команде. Также у меня был опыт работы с системами CMS, такими как WordPress. Работаю с шаблонами Photoshop, Zeplin, Figma и т.д. Я всегда двигаюсь вперед и изучаю новые технологии и навыки. Умею общаться с коллективом. Вот как то так...</span>
       </div>
       <ul class="progress">
         <li v-for="(el,index) in skills" :key="index">
@@ -44,9 +44,9 @@
     <section class="certificates">
       <h2>Мои сертификаты</h2>
       <div class="certificates-images">
-        <q-img class="certificate-item" src="../img/1.2.jpg" />
-        <q-img class="certificate-item" src="../img/2.1.jpg" />
-        <q-img class="certificate-item" src="../img/2.2.jpg" />
+        <a href="../img/1.2.jpg"><q-img class="certificate-item" src="../img/1.2.jpg" /></a>
+        <a href="../img/2.1.jpg"><q-img class="certificate-item" src="../img/2.1.jpg" /></a>
+        <a href="../img/2.2.jpg"><q-img class="certificate-item" src="../img/2.2.jpg" /></a>
       </div>
     </section>
     <page-contacts />
@@ -71,7 +71,7 @@ export default {
           progress: 95
         },
         {
-          stack: 'LavaScript',
+          stack: 'JavaScript',
           progress: 80
         },
         {
@@ -106,7 +106,7 @@ export default {
   font-size: 40px
   font-weight: bold
   text-align: center
-  margin: 30px 0 40px 0
+  margin: 20px 0 40px 0
 
 .certificates h2,
 .skills-main h2

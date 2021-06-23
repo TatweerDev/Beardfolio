@@ -22,6 +22,13 @@
       </q-toolbar>
     </q-header>
 
+    <q-img src="../img/banner.jpg">
+      <div class="absolute-center text-subtitle1 titles bg-transparent">
+        <span class="text-h4 text-bold text-center "> Привет!</span>
+        <span class="block text-h6 bg-black">Добро пожаловать в мое портфолио</span>
+      </div>
+    </q-img>
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -66,4 +73,14 @@ export default {
   font-size: 30px
 .menu-item
   color: #fff !important
+
+.titles 
+  width: 330px
+  display: flex
+  flex-direction: column
+  text-align: center
+  background-color: transparent
+
+.q-page-container
+  padding-top: 0 !important
 </style>
