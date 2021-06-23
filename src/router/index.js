@@ -4,8 +4,11 @@ import VueRouter from 'vue-router'
 
 import routes from './routes'
 
+
+
 Vue.use(Vuex)
 Vue.use(VueRouter)
+
 
 /*
  * If not building with SSR mode, you can

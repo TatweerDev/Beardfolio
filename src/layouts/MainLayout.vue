@@ -29,6 +29,11 @@
     <q-footer bordered>
       <q-tabs class="bg-grey-9 mobile-screen" active-color="positive">
         <q-route-tab
+          name="main"
+          icon="home"
+          label="Главная"
+          to="/" />
+        <q-route-tab
           name="about"
           icon="person"
           label="Обо мне"
@@ -38,10 +43,7 @@
           icon="perm_media"
           label="Все проекты"
           to="/projects" />
-        <q-tab
-          name="contacts"
-          icon="import_contacts"
-          label="Мои контакты" />
+        
       </q-tabs>
     </q-footer>
   </q-layout>

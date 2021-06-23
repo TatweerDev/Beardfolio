@@ -12,6 +12,7 @@
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "quasar": "^1.0.0",
+    "vue-radial-progress": "^0.3.2",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
