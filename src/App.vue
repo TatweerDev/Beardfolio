@@ -25,4 +25,7 @@ ul
     max-width: 768px
     margin: 0 auto
 
+  @media (min-width: $tablet-width)
+    max-width: 1024px
+
 </style>

@@ -4,7 +4,7 @@
       <q-img src="../img/photo1.png" class="custom-image" />
       <div class="relative">
         <span class="descr">
-          Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик (Мидл).</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
+          Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик.</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки web приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
         </span>
         <router-link class="text-red absolute-bottom-right link-more" to="/about">
           Подробнее...
@@ -17,7 +17,7 @@
       <ul class="projects-list-short">
         <li v-for="(el,index) in projects" :key="index">
           <a :href="el.link" class="text-red project-link" target="_blank" rel="noopener">
-            <q-img :src="el.img" :ratio="2/1" class="image"/>
+            <q-img :src="el.img" :ratio="2/1" />
             <span class="project-descr"><span class="text-red">{{ el.title }}</span>{{ el.descr }}</span>
           </a>
         </li>
@@ -87,14 +87,23 @@ export default {
   @media (min-width: $tablet-width)
     width: 270px
 
+  @media (min-width: $desktop-width)
+    width: 370px
+    order: 2
+
 .descr
   display: inline-block
   margin-top: 10px
   padding: 15px
   font-size: 18px
-
   @media (min-width: $tablet-width)
     width: 450px
+  @media (min-width: $desktop-width)
+    width: 550px
+    font-size: 20px
+    line-height: 30px
+    padding: 0
+    margin-top: 50px
 
 .projects
   margin: 40px 0 20px 0
@@ -114,12 +123,16 @@ export default {
 .link-more
   font-size: 18px
   right: 15px !important
+  &:hover
+    opacity: 0.7
 
 .link-projects
   width: 100%
   display: block
   margin: 40px 0
   text-align: center
+  &:hover
+    opacity: 0.7
 
 .project-descr
   display: flex
@@ -129,9 +142,14 @@ export default {
   text-align: center
   padding: 0 10px
   color: #fff
+  &:hover
+    opacity: 0.7
 
 .project-link
   text-decoration: none
+
+.project-link div:hover
+  opacity: 0.7
 
 .info-wrapper
   @media (min-width: $tablet-width)
@@ -150,6 +168,8 @@ export default {
 .projects-list-short li
   @media (min-width: $tablet-width)
     width: 350px
+  @media (min-width: $desktop-width)
+    width: 450px
 
 </style>
 

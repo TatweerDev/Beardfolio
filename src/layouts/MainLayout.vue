@@ -14,7 +14,13 @@
             <q-route-tab name="videos" label="Обо мне" to="/about"/>
             <q-route-tab name="articles" label="Проекты" to="/projects" />
           </q-tabs>
-          <div>Ru</div>
+           <q-select borderless :options="options" label="Ru" >
+             <template v-slot:append>
+              <q-avatar>
+                <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg">
+              </q-avatar>
+            </template>
+           </q-select>
         </div>
         
       </q-toolbar>
@@ -22,8 +28,8 @@
 
     <q-img src="../img/banner.jpg" class="image-banner">
       <div class="absolute-center text-subtitle1 titles bg-transparent">
-        <span class="text-h4 text-bold text-center "> Привет!</span>
-        <span class="block text-h6 bg-black">Добро пожаловать в мое портфолио</span>
+        <span class="text-h4 text-bold text-center hello"> Привет!</span>
+        <span class="block text-h6 bg-black welcome">Добро пожаловать в мое портфолио</span>
       </div>
     </q-img>
 
@@ -60,6 +66,7 @@ export default {
   name: 'MainLayout',
   data () {
     return {
+      options: ['ru','en','tr']
     }
   }
 }
@@ -71,6 +78,8 @@ export default {
   font-size: 30px
   @media (min-width: $tablet-width)
     font-size: 40px
+  &:hover
+    color: #f44336 !important
 
 .menu-item
   color: #fff !important
@@ -97,8 +106,20 @@ export default {
     height: 400px
 
 .tabs
-  @media (min-width: $tablet-width)
+  @media (min-width: $desktop-width)
     padding-top: 10px
 
+.tabs a:hover
+  opacity: 1
 
+.hello
+  @media (min-width: $desktop-width)
+    font-size: 40px
+    display: block
+    margin-bottom: 10px
+.welcome
+  @media (min-width: $desktop-width)
+    width: 500px
+    padding: 10px
+    margin-left: -100px
 </style>

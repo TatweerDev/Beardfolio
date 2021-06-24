@@ -1,13 +1,17 @@
 <template>
   <section class="text-white">
-    <h2>Оцените некоторые мои работы</h2>
-    <ul class="projects-list">
-      <li v-for="(item, index) in info" :key="index" class="container">
-        <h3>{{ item.header }}</h3>
-        <a :href="item.link"><q-img :src="item.imageSrc" /></a>
-        <span class="project-descr" v-html="item.descr" />
-      </li>
-    </ul>
+    <div class="container">
+      <h2>Оцените некоторые мои работы</h2>
+      <ul class="projects-list">
+        <li v-for="(item, index) in info" :key="index" >
+          <h3>{{ item.header }}</h3>
+          <div class="content-wrapper">
+            <a :href="item.link"><q-img :src="item.imageSrc" class="projects-image" /></a>
+            <span class="project-descr" v-html="item.descr" />
+          </div>
+        </li>
+      </ul>
+    </div>
     <page-contacts />
   </section>
 </template>
@@ -78,7 +82,7 @@ export default {
           link: 'https://spares-shop.netlify.app/home.html',
           header: 'Spares shop',
           imageSrc: '../img/Spares.jpg',
-          descr: 'Магазин автозапчастей. Сделано на <span class="text-red">HTML, CSS и JS</span> с любовью.... '
+          descr: 'Магазин автозапчастей. Сделано на <span class="text-red">HTML, CSS и JS</span> с любовью... Также я испозовал в проекте <span class="text-red">JQuerry</span> '
         },
         {
           link: 'https://kvast.netlify.app',
@@ -100,6 +104,10 @@ export default {
   text-align: center
   margin: 40px 0
 
+.projects-list
+  @media (min-width: $tablet-width)
+    padding: 15px
+
 .projects-list li
   padding-bottom: 40px
   border-bottom: 1px solid #fff
@@ -113,4 +121,18 @@ export default {
   padding: 30px 0 10px 0
   display: block
   font-size: 16px
+  @media (min-width: $desktop-width)
+    margin-left: 20px
+    padding-top: 0
+    line-height: 39px
+
+.projects-image
+  @media (min-width: $desktop-width)
+    width: 500px
+
+.content-wrapper
+  @media (min-width: $desktop-width)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 </style>

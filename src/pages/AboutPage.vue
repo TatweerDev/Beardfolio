@@ -24,7 +24,7 @@
       
       <q-btn outline rounded color="red" label="Скачать CV" class="text-white cv-button"/>
     </section>
-    <section class="skills-main">
+    <section class="skills-main container">
       <h2>Мои навыки</h2>
       <div class="text-wrapper">
         <span class="skills-text">Для работы я использую <span class="text-red">HTML, CSS и JavaScript.</span> Пишу код как на нативном  <span class="text-red">JavaScript(ES7)</span>, так и на фреймворках - в основном на <span class="text-red">Vue.js(Vue2, Vue3)</span>, а так же <span class="text-red">Quasar</span> и <span class="text-red">JQuerry.</span> На <span class="text-green">Vue</span> есть опыт работы с <span class="text-green">REST API, Vuex, Router, Service Worker</span> и другими библиотеками. Также разрабатывал универсальные веб и мобильные приложения - <span class="text-red">PWA</span>, используя  <span class="text-red">Quasar</span>. Само собой уверенно использую <span class="text-red">GIT, SASS, LESS, Webpack, Gulp, Node</span> и другие базовые технологии, необходимые сегодня для разработки. Есть опыт работы в команде. Также у меня был опыт работы с системами CMS, такими как WordPress. Работаю с шаблонами Photoshop, Zeplin, Figma и т.д. Я всегда двигаюсь вперед и изучаю новые технологии и навыки. Умею общаться с коллективом. Вот как то так...</span>
@@ -44,7 +44,7 @@
         </li>
       </ul>
     </section>
-    <section class="certificates">
+    <section class="certificates container">
       <h2>Мои сертификаты</h2>
       <div class="certificates-images">
         <a href="../img/1.2.jpg"><q-img class="certificate-item" src="../img/1.2.jpg" /></a>
@@ -125,6 +125,8 @@ export default {
     display: flex
     flex-direction: row
     justify-content: space-around
+  @media (min-width: $desktop-width)
+    margin-left: 20px
 
 .info-text div span
   display: block
@@ -132,9 +134,13 @@ export default {
   margin-bottom: 10px
   @media (min-width: $tablet-width)
     font-size: 17px
+  @media (min-width: $desktop-width)
+    margin-bottom: 20px
 
 .info-link
   text-decoration: none
+  &:hover
+    text-decoration: underline
 
 .text-wrapper
   margin-top: 20px
@@ -152,6 +158,11 @@ export default {
   margin-top: 20px
   @media (min-width: $tablet-width)
     margin: 30px auto 0 25px
+  @media (min-width: $desktop-width)
+    margin: -65px 0px 0 350px
+  &:hover
+    color: #fff !important
+    
 
 .progress
   display: flex
@@ -163,6 +174,9 @@ export default {
   @media (min-width: $tablet-width)
     flex-direction: row
     flex-wrap: wrap
+  @media (min-width: $desktop-width)
+    width: 900px
+    margin: 0 auto
 
 .progress li
   margin-bottom: 20px
@@ -190,15 +204,24 @@ export default {
   margin-bottom: 30px
   @media (min-width: $tablet-width)
     width: 230px
+  &:hover
+    opacity: 0.7
 
 .about-wrapper
   display: flex
   flex-direction: column
+  @media (min-width: $desktop-width)
+    flex-direction: row
+    justify-content: space-between
+  
+
 .about-photo
   @media (min-width: $tablet-width)
     margin: 0 auto
     width: 400px
+  @media (min-width: $desktop-width)
+    width: 350px
 
-.progress-item
+// .progress-item
 
 </style>
