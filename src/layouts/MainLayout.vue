@@ -9,7 +9,7 @@
               Beardfolio
             </router-link>
           </q-toolbar-title>
-          <q-tabs class="tablet-screen" >
+          <q-tabs class="tablet-screen tabs" >
             <q-route-tab name="images" label="Главная" to="/" />
             <q-route-tab name="videos" label="Обо мне" to="/about"/>
             <q-route-tab name="articles" label="Проекты" to="/projects" />
@@ -69,6 +69,9 @@ export default {
 .link
   text-decoration: none
   font-size: 30px
+  @media (min-width: $tablet-width)
+    font-size: 40px
+
 .menu-item
   color: #fff !important
 
@@ -87,10 +90,15 @@ export default {
   display: flex
   flex-direction: row
   flex-wrap: nowrap
+  
 
 .image-banner
   @media (min-width: $tablet-width)
     height: 400px
+
+.tabs
+  @media (min-width: $tablet-width)
+    padding-top: 10px
 
 
 </style>

@@ -1,24 +1,27 @@
 <template>
   <div>
-    <section class="info-main">
+    <section class="info-main container">
       <h2>Обо мне</h2>
-      <q-img  src="../img/my-photo.jpg" />
-      <div class="text-white info-text">
-        <div>
-          <span>Имя: Александр</span>
-          <span>Фамилия: Чумаслов</span>
-          <span>Возраст: 36</span>
-          <span>Гражданство: РФ</span>
-          <span>Языки: Русский, Английский, Арабский</span>
-        </div>
-        <div>
-          <span>Семейное положение: женат</span>
-          <span>Место работы: фриланс</span>
-          <span>Текущий адрес: Турция, Стамбул</span>
-          <span>Номер телефона:  +905376250895</span>
-          <span>GitHub: <a href="https://github.com/TatweerDev" target="_blank" rel="noopener" class="text-white info-link"> https://github.com/TatweerDev </a></span>
+      <div class="about-wrapper">
+        <q-img class="about-photo" src="../img/my-photo.jpg" />
+        <div class="text-white info-text">
+          <div>
+            <span>Имя: Александр</span>
+            <span>Фамилия: Чумаслов</span>
+            <span>Возраст: 36</span>
+            <span>Гражданство: РФ</span>
+            <span>Языки: Русский, Английский, Арабский</span>
+          </div>
+          <div>
+            <span>Семейное положение: женат</span>
+            <span>Место работы: фриланс</span>
+            <span>Текущий адрес: Турция, Стамбул</span>
+            <span>Номер телефона:  +905376250895</span>
+            <span>GitHub: <a href="https://github.com/TatweerDev" target="_blank" rel="noopener" class="text-white info-link"> https://github.com/TatweerDev </a></span>
+          </div>
         </div>
       </div>
+      
       <q-btn outline rounded color="red" label="Скачать CV" class="text-white cv-button"/>
     </section>
     <section class="skills-main">
@@ -27,9 +30,9 @@
         <span class="skills-text">Для работы я использую <span class="text-red">HTML, CSS и JavaScript.</span> Пишу код как на нативном  <span class="text-red">JavaScript(ES7)</span>, так и на фреймворках - в основном на <span class="text-red">Vue.js(Vue2, Vue3)</span>, а так же <span class="text-red">Quasar</span> и <span class="text-red">JQuerry.</span> На <span class="text-green">Vue</span> есть опыт работы с <span class="text-green">REST API, Vuex, Router, Service Worker</span> и другими библиотеками. Также разрабатывал универсальные веб и мобильные приложения - <span class="text-red">PWA</span>, используя  <span class="text-red">Quasar</span>. Само собой уверенно использую <span class="text-red">GIT, SASS, LESS, Webpack, Gulp, Node</span> и другие базовые технологии, необходимые сегодня для разработки. Есть опыт работы в команде. Также у меня был опыт работы с системами CMS, такими как WordPress. Работаю с шаблонами Photoshop, Zeplin, Figma и т.д. Я всегда двигаюсь вперед и изучаю новые технологии и навыки. Умею общаться с коллективом. Вот как то так...</span>
       </div>
       <ul class="progress">
-        <li v-for="(el,index) in skills" :key="index">
+        <li v-for="(el,index) in skills" :key="index" class="progress-item">
           <radial-progress-bar
-            :diameter="170"
+            :diameter="220"
             :completed-steps="el.progress"
             :total-steps="totalSteps"
             startColor="#f44336"
@@ -118,11 +121,17 @@ export default {
 
 .info-text
   margin-top: 20px
+  @media (min-width: $tablet-width)
+    display: flex
+    flex-direction: row
+    justify-content: space-around
 
 .info-text div span
   display: block
   font-size: 16px
   margin-bottom: 10px
+  @media (min-width: $tablet-width)
+    font-size: 17px
 
 .info-link
   text-decoration: none
@@ -135,15 +144,25 @@ export default {
   font-size: 16px
   line-height: 30px
   color: #fff
+  @media (min-width: $tablet-width)
+    font-size: 18px
+    line-height: 35px
 
 .cv-button
   margin-top: 20px
+  @media (min-width: $tablet-width)
+    margin: 30px auto 0 25px
 
 .progress
   display: flex
+  flex-direction: column
   flex-wrap: wrap
   justify-content: space-between
   padding: 20px
+  align-items: center
+  @media (min-width: $tablet-width)
+    flex-direction: row
+    flex-wrap: wrap
 
 .progress li
   margin-bottom: 20px
@@ -164,7 +183,22 @@ export default {
   justify-content: space-between
   margin-top: 30px
   padding: 15px
+  @media (min-width: $tablet-width)
+    flex-direction: row
 
 .certificate-item
   margin-bottom: 30px
+  @media (min-width: $tablet-width)
+    width: 230px
+
+.about-wrapper
+  display: flex
+  flex-direction: column
+.about-photo
+  @media (min-width: $tablet-width)
+    margin: 0 auto
+    width: 400px
+
+.progress-item
+
 </style>

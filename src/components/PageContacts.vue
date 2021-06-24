@@ -60,6 +60,8 @@
   padding-top: 10px
   font-size: 12px
   background-color: transparent
+  @media (min-width: $tablet-width)
+    font-size: 25px
 
 .svg-icon
   display: block
