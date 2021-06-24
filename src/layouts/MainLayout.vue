@@ -107,7 +107,7 @@ export default {
 
 .tabs
   @media (min-width: $desktop-width)
-    padding-top: 10px
+    margin-top: 10px
 
 .tabs a:hover
   opacity: 1
@@ -117,6 +117,8 @@ export default {
     font-size: 40px
     display: block
     margin-bottom: 10px
+  @media (min-width: $widescreen-width)
+    font-size: 45px
 .welcome
   @media (min-width: $desktop-width)
     width: 500px

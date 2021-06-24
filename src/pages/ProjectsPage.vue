@@ -40,7 +40,7 @@ export default {
           link: 'https://photograf.itdak.pro/#/',
           header: 'Photograf',
           imageSrc: '../img/photograf.png',
-          descr: '<span class="text-red">PWA - </span> сайт и мобильное приложение для любителей фотографии. Сделан на <span class="text-red">Quasar + Vue.js.</span>. Приложение имеет десктопную версию для Windows, Linux и Mac, а также мобильную версию для Andriod и iOS. К сайту подключен <span class="text-red"> Service worker</span>'
+          descr: '<span class="text-red">PWA - </span> сайт и мобильное приложение для любителей фотографии. Сделан на <span class="text-red">Quasar + Vue.js.</span>. Приложение имеет десктопную версию для Windows, Linux и Mac, а также мобильное приложение для Andriod и iOS. К сайту подключен <span class="text-red"> Service worker</span>'
         },
         {
           link: 'https://eios.netlify.app/',

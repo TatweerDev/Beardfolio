@@ -86,10 +86,11 @@ export default {
 .custom-image
   @media (min-width: $tablet-width)
     width: 270px
-
   @media (min-width: $desktop-width)
     width: 370px
     order: 2
+  @media (min-width: $widescreen-width)
+    width: 500px
 
 .descr
   display: inline-block
@@ -104,6 +105,10 @@ export default {
     line-height: 30px
     padding: 0
     margin-top: 50px
+  @media (min-width: $widescreen-width)
+    width: 840px
+    font-size: 24px
+    line-height: 40px
 
 .projects
   margin: 40px 0 20px 0
@@ -115,6 +120,9 @@ export default {
   font-weight: bold
   text-align: center
   margin: 10px 0 40px 0
+  @media (min-width: $widescreen-width)
+    font-size: 45px
+    margin-top: 30px
 
 .relative
   position: relative
@@ -123,16 +131,22 @@ export default {
 .link-more
   font-size: 18px
   right: 15px !important
+  @media (min-width: $widescreen-width)
+    font-size: 21px
   &:hover
     opacity: 0.7
+    text-decoration: none
 
 .link-projects
   width: 100%
   display: block
   margin: 40px 0
   text-align: center
+  @media (min-width: $widescreen-width)
+    font-size: 20px
   &:hover
     opacity: 0.7
+    text-decoration: none
 
 .project-descr
   display: flex
