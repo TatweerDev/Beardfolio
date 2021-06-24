@@ -1,17 +1,20 @@
 <template>
   <q-page class=" bg-primary text-white">
-    <q-img src="../img/photo1.png" class="custom-image" />
-    <div class="relative">
-      <span class="descr">
-        Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик (Мидл).</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
-      </span>
-      <router-link class="text-red absolute-bottom-right link-more" to="/about">
-        Подробнее...
-      </router-link>
+    <div class="info-wrapper container">
+      <q-img src="../img/photo1.png" class="custom-image" />
+      <div class="relative">
+        <span class="descr">
+          Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик (Мидл).</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
+        </span>
+        <router-link class="text-red absolute-bottom-right link-more" to="/about">
+          Подробнее...
+        </router-link>
+      </div>
     </div>
-    <section class="projects">
+    
+    <section class="projects container">
       <h2>Мои проекты</h2>
-      <ul>
+      <ul class="projects-list-short">
         <li v-for="(el,index) in projects" :key="index">
           <a :href="el.link" class="text-red project-link" target="_blank" rel="noopener">
             <q-img :src="el.img" :ratio="2/1" class="image"/>
@@ -51,7 +54,7 @@ export default {
         {
           title: 'Photograf',
           descr: 'Сайт и мобильное приложение для любителей фотографи',
-          link: 'https://photograf.barbium.com/#/',
+          link: 'https://photograf.itdak.pro/#/',
           img: '../img/photograf.png'
         },
         {
@@ -80,17 +83,23 @@ export default {
 
 <style lang="sass" scoped>
 
+.custom-image
+  @media (min-width: $tablet-width)
+    width: 270px
 
-// .custom-image
 .descr
   display: inline-block
   margin-top: 10px
   padding: 15px
   font-size: 18px
 
+  @media (min-width: $tablet-width)
+    width: 450px
+
 .projects
   margin: 40px 0 20px 0
-
+  @media (min-width: $tablet-width)
+    margin: auto
 
 .projects h2
   font-size: 40px
@@ -123,6 +132,24 @@ export default {
 
 .project-link
   text-decoration: none
+
+.info-wrapper
+  @media (min-width: $tablet-width)
+    padding: 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  
+.projects-list-short
+  @media (min-width: $tablet-width)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 15px
+  
+.projects-list-short li
+  @media (min-width: $tablet-width)
+    width: 350px
 
 </style>
 

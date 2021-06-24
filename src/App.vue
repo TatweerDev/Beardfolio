@@ -18,6 +18,11 @@ ul
   list-style: none
   padding-left: 0
 
-.cotntainer
-  margin: 0 15px 0 15px
+.container
+  max-width: 599px
+
+  @media (min-width: $tablet-width)
+    max-width: 768px
+    margin: 0 auto
+
 </style>

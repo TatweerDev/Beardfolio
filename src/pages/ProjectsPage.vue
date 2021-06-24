@@ -2,7 +2,7 @@
   <section class="text-white">
     <h2>Оцените некоторые мои работы</h2>
     <ul class="projects-list">
-      <li v-for="(item, index) in info" :key="index" class="cotntainer">
+      <li v-for="(item, index) in info" :key="index" class="container">
         <h3>{{ item.header }}</h3>
         <a :href="item.link"><q-img :src="item.imageSrc" /></a>
         <span class="project-descr" v-html="item.descr" />
@@ -42,7 +42,7 @@ export default {
           link: 'https://eios.netlify.app/',
           header: 'ЭИОС - электронная информаионно - образовательная среда',
           imageSrc: '../img/eios.png',
-          descr: 'Небольшой <span class="text-red">SPA - </span> сайт, прототип для хранения информации об учебном процессе для школьников и преподавателей. Сделан на <span class="text-red">Vue.js.</span>'
+          descr: 'Небольшой <span class="text-red">SPA - </span> сайт, прототип для хранения информации об учебном процессе для школьников и преподавателей. Сделан на <span class="text-red">Vue.js.</span>. Только десктопная версия (т.е. сайт не адаптивный)'
         },
         {
           link: 'https://mthvatan.com/',
@@ -84,7 +84,7 @@ export default {
           link: 'https://kvast.netlify.app',
           header: 'Kvast',
           imageSrc: '../img/Kvast.jpg',
-          descr: 'Простенький одностраничный лендинг для фирмы продающей квас'
+          descr: 'Простенький одностраничный лендинг для фирмы продающей квас. Только десктоп'
         },
       ] 
     }
