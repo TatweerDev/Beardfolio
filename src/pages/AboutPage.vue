@@ -127,6 +127,10 @@ export default {
     justify-content: space-around
   @media (min-width: $desktop-width)
     margin-left: 20px
+  @media (min-width: $widescreen-width)
+    flex-grow: 2
+
+
 
 .info-text div span
   display: block
@@ -136,6 +140,9 @@ export default {
     font-size: 17px
   @media (min-width: $desktop-width)
     margin-bottom: 20px
+  @media (min-width: $widescreen-width)
+    font-size: 19px
+    margin-bottom: 35px
 
 .info-link
   text-decoration: none
@@ -145,6 +152,8 @@ export default {
 .text-wrapper
   margin-top: 20px
   padding: 15px
+  @media (min-width: $widescreen-width)
+    margin-top: 50px
 
 .skills-text
   font-size: 16px
@@ -159,9 +168,15 @@ export default {
   @media (min-width: $tablet-width)
     margin: 30px auto 0 25px
   @media (min-width: $desktop-width)
-    margin: -65px 0px 0 350px
+    margin: -65px 0 0 350px
   &:hover
     color: #fff !important
+  @media (min-width: $widescreen-width)
+    margin: -90px 0 0 525px
+    width: 200px
+    height: 75px
+    font-size: 20px
+    border-radius: 40px
     
 
 .progress
@@ -177,6 +192,9 @@ export default {
   @media (min-width: $desktop-width)
     width: 900px
     margin: 0 auto
+  @media (min-width: $widescreen-width)
+    width: 100%
+    margin: 50px 0
 
 .progress li
   margin-bottom: 20px
@@ -204,6 +222,8 @@ export default {
   margin-bottom: 30px
   @media (min-width: $tablet-width)
     width: 230px
+  @media (min-width: $widescreen-width)
+    width: 350px
   &:hover
     opacity: 0.7
 
@@ -221,6 +241,10 @@ export default {
     width: 400px
   @media (min-width: $desktop-width)
     width: 350px
+  @media (min-width: $widescreen-width)
+    width: 400px
+    flex-grow: 1
+    
 
 // .progress-item
 

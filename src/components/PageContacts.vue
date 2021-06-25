@@ -21,7 +21,7 @@
         <svg class="svg-icon" width="45" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.73.68C9.3.68.26 9.75.26 22.06.26 34.52 9.2 43.6 22.54 43.6c3.48 0 7.52-.75 10.39-2.21l-1.27-3.76a20.76 20.76 0 01-9.12 2.07c-10.8 0-17.95-7.24-17.95-17.63 0-10.24 7.24-17.53 18.14-17.53 10.72 0 18.05 6.77 18.05 16.83 0 5.54-1.41 8.5-3.95 8.5-1.32 0-2.44-.8-2.44-3.2V10.7h-5.22v3.05c-1.83-2.2-4.56-3.33-7.85-3.33-6.49 0-11.28 4.93-11.28 11.89 0 7.05 4.8 11.98 11.28 11.98 3.76 0 6.63-1.4 8.46-4.09.8 2.68 2.96 4.1 5.97 4.1 5.64 0 9.02-4.9 9.02-13.03C44.77 9.28 35.7.68 22.73.68zm-.42 29.04c-4.1 0-6.96-2.86-6.96-7.42 0-4.52 2.87-7.34 6.96-7.34 3.95 0 6.95 2.68 6.95 7.34 0 4.7-3 7.42-6.95 7.42z" fill="#fff"/>
         </svg>
-        <span class="contact-link mail">tatweer.development2020@gmail.com</span>
+        <span class="contact-link mail"><a href="mailto:tatweer.development2020@gmail.com" class="mail-link" target="_blank" rel="noopener">tatweer.development2020@gmail.com</a></span>
       </div>
     </div>
     <div class="copyright">Beardfolio 2021</div>
@@ -67,7 +67,13 @@
     font-size: 25px
   @media (min-width: $desktop-width)
     padding-top: 3px
-  
+
+.mail-link
+  color: #fff
+  text-decoration: none
+  &:hover
+    opacity: 0.7
+
 .email
   @media (min-width: $desktop-width)
     display: flex
@@ -75,7 +81,8 @@
     width: 100%
     text-align: center
     padding: 0 210px
-
+  @media (min-width: $widescreen-width)
+    padding: 0 420px
 .svg-icon
   display: block
 
@@ -104,6 +111,8 @@
   @media (min-width: $desktop-width)
     margin-left: 130px
     margin-right: 180px
+  @media (min-width: $widescreen-width)
+    margin: 0 290px
   &:hover
     opacity: 0.7
 </style>
