@@ -168,7 +168,7 @@ export default {
   @media (min-width: $tablet-width)
     margin: 30px auto 0 25px
   @media (min-width: $desktop-width)
-    margin: -65px 0 0 350px
+    margin: -65px 0 0 385px
   &:hover
     color: #fff !important
   @media (min-width: $widescreen-width)

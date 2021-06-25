@@ -123,12 +123,15 @@ export default {
   font-size: 16px
   @media (min-width: $desktop-width)
     margin-left: 20px
+    margin-right: auto
     padding-top: 0
     line-height: 39px
 
 .projects-image
   @media (min-width: $desktop-width)
     width: 500px
+  @media (min-width: $widescreen-width)
+    width: 600px
 
 .content-wrapper
   @media (min-width: $desktop-width)

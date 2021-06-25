@@ -35,7 +35,6 @@ import PageContacts from 'src/components/PageContacts.vue'
 
 export default {
   components: { PageContacts },
-  // name: 'PageIndex',
   data() {
     return {
       projects: [

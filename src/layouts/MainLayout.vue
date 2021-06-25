@@ -14,13 +14,6 @@
             <q-route-tab name="videos" label="Обо мне" to="/about"/>
             <q-route-tab name="articles" label="Проекты" to="/projects" />
           </q-tabs>
-           <q-select borderless :options="options" label="Ru" >
-             <template v-slot:append>
-              <q-avatar>
-                <img src="https://cdn.quasar.dev/logo-v2/svg/logo.svg">
-              </q-avatar>
-            </template>
-           </q-select>
         </div>
         
       </q-toolbar>
@@ -59,18 +52,6 @@
     </q-footer>
   </q-layout>
 </template>
-
-<script>
-
-export default {
-  name: 'MainLayout',
-  data () {
-    return {
-      options: ['ru','en','tr']
-    }
-  }
-}
-</script>
 
 <style lang="sass">
 .link
