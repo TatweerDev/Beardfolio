@@ -1,29 +1,46 @@
 <template>
-  <q-page class=" bg-primary text-white">
+  <q-page class="bg-primary text-white">
     <div class="info-wrapper container">
       <q-img src="../img/photo1.png" class="custom-image" />
       <div class="relative">
         <span class="descr">
-          Меня зовут Александр, и я <span class="text-red">Фронтенд разработчик.</span> Я работаю с <span class="text-red">Vue.js</span> и <span class="text-red">Quasar</span>, а также другими JavaScript фреймворками. У меня есть опыт коммерческой разработки web приложений - это SPA, PWA, Android и iOS приложения... Я говорю на русском, английском и арабском языках. Добро пожаловать в мое портфолио =)
+          My name is Alexander, and I am a
+          <span class="text-red">Frontend Developer.</span> I work with
+          <span class="text-red">Vue.js</span> and
+          <span class="text-red">Quasar</span>, as well as other JavaScript
+          frameworks. I have experience in commercial web application
+          development, including SPA, PWA, Android, and iOS applications... I
+          speak Russian, English, and Arabic. Welcome to my portfolio =)
         </span>
-        <router-link class="text-red absolute-bottom-right link-more" to="/about">
-          Подробнее...
+        <router-link
+          class="text-red absolute-bottom-right link-more"
+          to="/about"
+        >
+          Learn more...
         </router-link>
       </div>
     </div>
-    
+
     <section class="projects container">
-      <h2>Мои проекты</h2>
+      <h2>My Projects</h2>
       <ul class="projects-list-short">
-        <li v-for="(el,index) in projects" :key="index">
-          <a :href="el.link" class="text-red project-link" target="_blank" rel="noopener">
-            <q-img :src="el.img" :ratio="2/1" />
-            <span class="project-descr"><span class="text-red">{{ el.title }}</span>{{ el.descr }}</span>
+        <li v-for="(el, index) in projects" :key="index">
+          <a
+            :href="el.link"
+            class="text-red project-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <q-img :src="el.img" :ratio="2 / 1" />
+            <span class="project-descr"
+              ><span class="text-red">{{ el.title }}</span
+              >{{ el.descr }}</span
+            >
           </a>
         </li>
       </ul>
       <router-link class="text-red link-projects" to="/projects">
-        Посмотреть все мои работы...
+        View all my works...
       </router-link>
     </section>
     <page-contacts />
@@ -31,7 +48,7 @@
 </template>
 
 <script>
-import PageContacts from 'src/components/PageContacts.vue'
+import PageContacts from "src/components/PageContacts.vue";
 
 export default {
   components: { PageContacts },
@@ -39,45 +56,45 @@ export default {
     return {
       projects: [
         {
-          title: 'Kavkaz.top',
-          descr: 'Информацонно - новостной портал',
-          link: 'https://kavkaz.top/',
-          img: '../img/kavkaz.png'
+          title: "STIHL USA",
+          descr: "Tool sales portal",
+          link: "https://www.stihlusa.com/",
+          img: require("../img/stihl.png"),
         },
         {
-          title: 'Tatweer.dev',
-          descr: 'Сайт студии веб разработки',
-          link: 'https://barbium.com/',
-          img: '../img/tat.jpg'
+          title: "Zaptest",
+          descr: "Corporate website for an IT company",
+          link: "https://www.zaptest.com/",
+          img: require("../img/zaptest.png"),
         },
         {
-          title: 'Photograf',
-          descr: 'Сайт и мобильное приложение для любителей фотографи',
-          link: 'https://photograf.itdak.pro/#/',
-          img: '../img/photograf.png'
+          title: "Fiqh Academy",
+          descr: "Online school",
+          link: "https://fiqhacademy.ru/",
+          img: require("../img/fa.png"),
         },
         {
-          title: 'ЭИОС',
-          descr: 'Информационная среда для школьников и учителей',
-          link: 'https://eios.netlify.app/',
-          img: '../img/eios.png'
+          title: "Kavkaz.top",
+          descr: "Information and news portal",
+          link: "https://kavkaz.top/",
+          img: require("../img/kavkaz.png"),
         },
         {
-          title: 'Shakur textile',
-          descr: 'Онлайн - магазин женской одежды',
-          link: 'https://shakur-textile.com/',
-          img: '../img/shakur.jpg'
+          title: "EIOS",
+          descr: "Information environment for students and teachers",
+          link: "https://eios.netlify.app/",
+          img: require("../img/eios.png"),
         },
         {
-          title: 'Vatanci',
-          descr: 'Информацонно - новостной портал',
-          link: 'https://mthvatan.com/',
-          img: '../img/vatan.png'
+          title: "Pink",
+          descr: "Website for a mobile application",
+          link: "https://pink-desktop.netlify.app/",
+          img: require("../img/pink.jpg"),
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="sass" scoped>
@@ -170,20 +187,17 @@ export default {
     display: flex
     flex-direction: row
     justify-content: space-between
-  
+
 .projects-list-short
   @media (min-width: $tablet-width)
     display: flex
     flex-wrap: wrap
     justify-content: space-between
     padding: 15px
-  
+
 .projects-list-short li
   @media (min-width: $tablet-width)
     width: 350px
   @media (min-width: $desktop-width)
     width: 450px
-
 </style>
-
-
