@@ -135,7 +135,7 @@ export default {
         },
         {
           stack: "Quasar",
-          progress: 90,
+          progress: 95,
         },
         {
           stack: "JQuerry",
