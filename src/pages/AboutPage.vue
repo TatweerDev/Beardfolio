@@ -148,7 +148,7 @@ export default {
   },
   computed: {
     cvLink() {
-      return require("../../public/assets/cv.png");
+      return require("../../public/cv.png");
     },
   },
 };
