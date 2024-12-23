@@ -1,55 +1,107 @@
 <template>
   <div>
     <section class="info-main container">
-      <h2>Обо мне</h2>
+      <h2>About Me</h2>
       <div class="about-wrapper">
         <q-img class="about-photo" src="../img/my-photo.jpg" />
         <div class="text-white info-text">
           <div>
-            <span>Имя: Александр</span>
-            <span>Фамилия: Чумаслов</span>
-            <span>Возраст: 36</span>
-            <span>Гражданство: РФ</span>
-            <span>Языки: Русский, Английский, Арабский</span>
+            <span>Name: Alexander</span>
+            <span>Surname: Chumaslov</span>
+            <span>Age:40</span>
+            <span>Citizenship: Russian Federation</span>
+            <span>Languages: Russian, English, Arabic</span>
           </div>
           <div>
-            <span>Семейное положение: женат</span>
-            <span>Место работы: фриланс</span>
-            <span>Текущий адрес: Турция, Стамбул</span>
-            <span>Номер телефона:  +905376250895</span>
-            <span>GitHub: <a href="https://github.com/TatweerDev" target="_blank" rel="noopener" class="text-white info-link"> https://github.com/TatweerDev </a></span>
+            <span>Marital Status: Married</span>
+            <span>Workplace: NDA</span>
+            <span>Current Address: Turkey, Istanbul</span>
+            <span>Phone Number: +905073178079</span>
+            <span>
+              GitHub:
+              <a
+                href="https://github.com/TatweerDev"
+                target="_blank"
+                rel="noopener"
+                class="text-white info-link"
+              >
+                https://github.com/TatweerDev
+              </a>
+            </span>
           </div>
         </div>
       </div>
-      
-      <q-btn outline rounded color="red" label="Скачать CV" class="text-white cv-button"/>
+
+      <a :href="cvLink" target="_blank" class="text-white cv-button" download
+        ><q-btn
+          outline
+          rounded
+          target="_blank"
+          color="red"
+          label="Download CV"
+          style="width: 200px; font-size: 18px"
+      /></a>
     </section>
     <section class="skills-main container">
-      <h2>Мои навыки</h2>
+      <h2>My Skills</h2>
       <div class="text-wrapper">
-        <span class="skills-text">Для работы я использую <span class="text-red">HTML, CSS и JavaScript.</span> Пишу код как на нативном  <span class="text-red">JavaScript(ES7)</span>, так и на фреймворках - в основном на <span class="text-red">Vue.js(Vue2, Vue3)</span>, а так же <span class="text-red">Quasar</span> и <span class="text-red">JQuerry.</span> На <span class="text-green">Vue</span> есть опыт работы с <span class="text-green">REST API, Vuex, Router, Service Worker</span> и другими библиотеками. Также разрабатывал универсальные веб и мобильные приложения - <span class="text-red">PWA</span>, используя  <span class="text-red">Quasar</span>. Само собой уверенно использую <span class="text-red">GIT, SASS, LESS, Webpack, Gulp, Node</span> и другие базовые технологии, необходимые сегодня для разработки. Есть опыт работы в команде. Также у меня был опыт работы с системами CMS, такими как WordPress. Работаю с шаблонами Photoshop, Zeplin, Figma и т.д. Я всегда двигаюсь вперед и изучаю новые технологии и навыки. Умею общаться с коллективом. Вот как то так...</span>
+        <span class="skills-text">
+          For my work, I use
+          <span class="text-red">HTML, CSS, and JavaScript.</span> I write code
+          in native <span class="text-red">JavaScript (ES7)</span> as well as in
+          frameworks, primarily
+          <span class="text-red">Vue.js (Vue2, Vue3)</span>, and also
+          <span class="text-red">Quasar</span> and
+          <span class="text-red">jQuery.</span> In
+          <span class="text-green">Vue</span>, I have experience with
+          <span class="text-green"
+            >REST API, Vuex, Pinia, Router, Service Worker</span
+          >
+          and other libraries. I have also developed universal web and mobile
+          applications - <span class="text-red">PWA</span> using
+          <span class="text-red">Quasar</span>. Naturally, I confidently use
+          <span class="text-red">GIT, SASS, LESS, Webpack, Gulp, Node</span> and
+          other essential technologies needed today for development. I have
+          experience working in a team. Additionally, I have worked with CMS
+          systems such as WordPress. I work with templates from Photoshop,
+          Zeplin, Figma, and more. I am always moving forward, learning new
+          technologies and skills, and I can communicate well within a team.
+          That's about it...
+        </span>
       </div>
       <ul class="progress">
-        <li v-for="(el,index) in skills" :key="index" class="progress-item">
+        <li v-for="(el, index) in skills" :key="index" class="progress-item">
           <radial-progress-bar
             :diameter="220"
             :completed-steps="el.progress"
             :total-steps="totalSteps"
             startColor="#f44336"
             stopColor="#c71104"
-            class="progress-bar">
+            class="progress-bar"
+          >
             <p class="text-white progress-number">{{ el.progress }} %</p>
-            <p class="text-white progress-stack" style="font-size: 20px; font-weight: bold;">{{ el.stack }}</p>
+            <p
+              class="text-white progress-stack"
+              style="font-size: 20px; font-weight: bold"
+            >
+              {{ el.stack }}
+            </p>
           </radial-progress-bar>
         </li>
       </ul>
     </section>
     <section class="certificates container">
-      <h2>Мои сертификаты</h2>
+      <h2>My Certificates</h2>
       <div class="certificates-images">
-        <a href="../img/1.2.jpg"><q-img class="certificate-item" src="../img/1.2.jpg" /></a>
-        <a href="../img/2.1.jpg"><q-img class="certificate-item" src="../img/2.1.jpg" /></a>
-        <a href="../img/2.2.jpg"><q-img class="certificate-item" src="../img/2.2.jpg" /></a>
+        <a href="../img/1.2.jpg" target="_blank"
+          ><q-img class="certificate-item" src="../img/1.2.jpg"
+        /></a>
+        <a href="../img/2.1.jpg" target="_blank"
+          ><q-img class="certificate-item" src="../img/2.1.jpg"
+        /></a>
+        <a href="../img/2.2.jpg" target="_blank"
+          ><q-img class="certificate-item" src="../img/2.2.jpg"
+        /></a>
       </div>
     </section>
     <page-contacts />
@@ -57,8 +109,8 @@
 </template>
 
 <script>
-import RadialProgressBar from 'vue-radial-progress'
-import PageContacts from 'src/components/PageContacts.vue'
+import RadialProgressBar from "vue-radial-progress";
+import PageContacts from "src/components/PageContacts.vue";
 
 export default {
   components: { RadialProgressBar, PageContacts },
@@ -66,35 +118,40 @@ export default {
     return {
       skills: [
         {
-          stack: 'HTML',
-          progress: 95
+          stack: "JavaScript",
+          progress: 90,
         },
         {
-          stack: 'CSS',
-          progress: 95
+          stack: "Vue.js",
+          progress: 95,
         },
         {
-          stack: 'JavaScript',
-          progress: 80
+          stack: "HTML",
+          progress: 95,
         },
         {
-          stack: 'Vue.js',
-          progress: 85
+          stack: "CSS",
+          progress: 95,
         },
         {
-          stack: 'Quasar',
-          progress: 80
+          stack: "Quasar",
+          progress: 90,
         },
         {
-          stack: 'JQuerry',
-          progress: 75
-        }
+          stack: "JQuerry",
+          progress: 85,
+        },
       ],
       html: 95,
-      totalSteps: 100
-    }
-  }
-}
+      totalSteps: 100,
+    };
+  },
+  computed: {
+    cvLink() {
+      return require("../img/cv.png");
+    },
+  },
+};
 </script>
 
 <style lang="sass" scoped>
@@ -130,8 +187,6 @@ export default {
   @media (min-width: $widescreen-width)
     flex-grow: 2
 
-
-
 .info-text div span
   display: block
   font-size: 16px
@@ -164,7 +219,10 @@ export default {
     line-height: 35px
 
 .cv-button
+  display: flex
   margin-top: 20px
+  width: fit-content
+  text-decoration: none
   @media (min-width: $tablet-width)
     margin: 30px auto 0 25px
   @media (min-width: $desktop-width)
@@ -177,7 +235,6 @@ export default {
     height: 75px
     font-size: 20px
     border-radius: 40px
-    
 
 .progress
   display: flex
@@ -230,10 +287,10 @@ export default {
 .about-wrapper
   display: flex
   flex-direction: column
+  min-height: 600px
   @media (min-width: $desktop-width)
     flex-direction: row
     justify-content: space-between
-  
 
 .about-photo
   @media (min-width: $tablet-width)
@@ -244,8 +301,4 @@ export default {
   @media (min-width: $widescreen-width)
     width: 400px
     flex-grow: 1
-    
-
-// .progress-item
-
 </style>
