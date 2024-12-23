@@ -143,6 +143,7 @@ export default {
   margin: 40px 0
 
 .projects-list
+  padding: 15px
   @media (min-width: $tablet-width)
     padding: 15px
 

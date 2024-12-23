@@ -35,12 +35,12 @@
 
     <q-footer bordered>
       <q-tabs class="bg-grey-9 mobile-screen" active-color="positive">
-        <q-route-tab name="main" icon="home" label="Главная" to="/" />
-        <q-route-tab name="about" icon="person" label="Обо мне" to="/about" />
+        <q-route-tab name="main" icon="home" label="Main" to="/" />
+        <q-route-tab name="about" icon="person" label="About me" to="/about" />
         <q-route-tab
           name="alarms"
           icon="perm_media"
-          label="Проекты"
+          label="Projects"
           to="/projects"
         />
       </q-tabs>

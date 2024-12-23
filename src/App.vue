@@ -5,16 +5,16 @@
 </template>
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
 
 <style lang="sass">
-body 
+body
   font-family: 'Montserrat', Arial, Helvetica, sans-serif
-  background-color: #1B1A17 
+  background-color: #1B1A17
 
-ul 
+ul
   list-style: none
   padding-left: 0
 
@@ -28,6 +28,4 @@ ul
     max-width: 1024px
   @media (min-width: $widescreen-width)
     max-width: 1440px
-
-
 </style>
