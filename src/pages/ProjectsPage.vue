@@ -1,10 +1,10 @@
 <template>
   <section class="text-white">
     <div class="container">
-      <h2>Оцените некоторые мои работы</h2>
+      <h2>Check out some of my work</h2>
       <h3 class="text-red tip">
-        *некоторые проекты могут не открываться по причине отсутствия поддержки
-        хостинга клиентом. Некоторые я делал довольно давно
+        *Some projects may not open due to lack of hosting support by the
+        client. Some of them were done quite a while ago
       </h3>
       <ul class="projects-list">
         <li v-for="(item, index) in info" :key="index">
